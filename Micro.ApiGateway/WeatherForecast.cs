@@ -1,4 +1,4 @@
-namespace Micro.Authentication
+namespace Micro.ApiGateway
 {
     public class WeatherForecast
     {

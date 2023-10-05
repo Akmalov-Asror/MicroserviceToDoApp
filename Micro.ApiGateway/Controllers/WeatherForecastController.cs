@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Micro.Authentication.Controllers
+namespace Micro.ApiGateway.Controllers
 {
     [ApiController]
     [Route("[controller]")]
