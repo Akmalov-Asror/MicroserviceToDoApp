@@ -9,7 +9,7 @@ namespace Micro.Domain.ExtensionFunctions;
 
 public class CreateTokenInJwtAuthorizationFromUsers
 {
-    public static readonly IHttpContextAccessor? HttpContextAccessor;
+    private static readonly IHttpContextAccessor? HttpContextAccessor;
     public static string CreateToken(User user)
     {
         List<Claim> claims = new List<Claim> {
