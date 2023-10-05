@@ -1,4 +1,3 @@
-using System.Reflection;
 using Micro.Domain.Data;
 using Micro.Domain.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
