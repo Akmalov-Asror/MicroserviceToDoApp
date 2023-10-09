@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5031
+          "Port": 1001
         }
       ],
       "UpstreamPathTemplate": "/auth/{action}",
@@ -18,7 +18,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5287
+          "Port": 1005
         }
       ],
       "UpstreamPathTemplate": "/todo/{action}",
