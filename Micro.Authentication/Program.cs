@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Micro.Domain.Repositories;
 using Microsoft.OpenApi.Models;
+using Micro.Authentication.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +41,7 @@ builder.Services.AddSwaggerGen(options =>
 
 });
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<EmailProducer>();
 builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -64,7 +66,6 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("asfsafsasafjsafjksafksafsafsafsafasfasfafasfsafasfsafsafassaf"))
     };
 });
-//builder.Services.AddServiceCollection(builder);
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
